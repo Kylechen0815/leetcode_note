@@ -27,5 +27,6 @@ Their dot product is (2*3 + (-2)*(-6)) = 18.
 ![ab20dcbd-7d4b-458e-a1c9-0779cf993eab](https://github.com/user-attachments/assets/0415b35d-6e32-4139-afd7-8eb329ba4c27)
 
 這種解法錯在他不一定是往右下加， 也有可能往右下的右邊加 這樣就答案就不正確 這題實際上ans:13
-![ab20dcbd-7d4b-458e-a1c9-0779cf993eab](https://github.com/user-attachments/assets/9fa461ea-546a-4282-9693-1a847c85a1e1)
+
+![609504821_1581432632987116_7449184954130108115_n](https://github.com/user-attachments/assets/78efe026-fc0b-4f22-acea-2ccc306a102e)
 
