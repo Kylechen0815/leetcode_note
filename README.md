@@ -23,5 +23,9 @@ Their dot product is (2*3 + (-2)*(-6)) = 18.
 說明：從 nums1 中取出子序列 [2,-2]，從 nums2 中取出子序列 [3,-6]。
 它們的點積是（2*3 + (-2)*(-6)）= 18。
 
+這題是在考dynamic progamming， 解法是把目前這格定義為 上面一格 左邊一格 和本格和左上格的和 的最大值比較
 ![ab20dcbd-7d4b-458e-a1c9-0779cf993eab](https://github.com/user-attachments/assets/0415b35d-6e32-4139-afd7-8eb329ba4c27)
+
+這種解法錯在他不一定是往右下加， 也有可能往右下的右邊加 這樣就答案就不正確 這題實際上ans:13
+![ab20dcbd-7d4b-458e-a1c9-0779cf993eab](https://github.com/user-attachments/assets/9fa461ea-546a-4282-9693-1a847c85a1e1)
 
