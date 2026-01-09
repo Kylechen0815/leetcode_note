@@ -30,49 +30,51 @@ Their dot product is (2*3 + (-2)*(-6)) = 18.
 
 ![609504821_1581432632987116_7449184954130108115_n](https://github.com/user-attachments/assets/78efe026-fc0b-4f22-acea-2ccc306a102e)
 
-import numpy as np
 
-class Solution(object):
-    def maxDotProduct(self, nums1, nums2):
-        """
-        :type nums1: List[int]
-        :type nums2: List[int]
-        :rtype: int
-        """
-        # 建立 len(nums1) x len(nums2) 的全 0 矩陣
-        dp = np.zeros((len(nums2), len(nums1)), dtype=int)
-        # 設為整數 -1,000,000,000
-        dp2 = np.full((len(nums1), len(nums2)), -10**9, dtype=int)
-        # range() 內必須是長度 (整數)
-        for i in range(len(nums2)):
-            for j in range(len(nums1)):
-                # 執行點積運算並存入矩陣
-                dp[i][j] = nums2[i] * nums1[j]
+====================================================================================================================================
+        import numpy as np
         
-        
-        print(dp)
-        print("\n")
-        self.ComMax(dp,dp2)
-
-        
-        # 根據題目要求，最後需要回傳一個整數結果（此處示範回傳矩陣最大值）
-        return int(np.max(dp))
-
-    def ComMax(self, inputarray, ansarray):
-        # i 遍歷「列」(rows)
-        for i in range(len(inputarray)):
-            # j 應該遍歷「欄」(columns)，所以要用 len(inputarray[0])
-            for j in range(len(inputarray[0])):
-                # np.max 必須傳入一個 list []
-                # 取得前一個狀態，如果是第一列或第一欄就當作 0 或負無限大
-                prev_val = inputarray[i-1][j-1] if (i > 0 and j > 0) else -10**9
-                up_val = inputarray[i-1][j] if i > 0 else -10**9
-                left_val = inputarray[i][j-1] if j > 0 else -10**9
-
-                inputarray[i][j] = max(inputarray[i][j], inputarray[i][j] + prev_val, up_val, left_val)
+        class Solution(object):
+            def maxDotProduct(self, nums1, nums2):
+                """
+                :type nums1: List[int]
+                :type nums2: List[int]
+                :rtype: int
+                """
+                # 建立 len(nums1) x len(nums2) 的全 0 矩陣
+                dp = np.zeros((len(nums2), len(nums1)), dtype=int)
+                # 設為整數 -1,000,000,000
+                dp2 = np.full((len(nums1), len(nums2)), -10**9, dtype=int)
+                # range() 內必須是長度 (整數)
+                for i in range(len(nums2)):
+                    for j in range(len(nums1)):
+                        # 執行點積運算並存入矩陣
+                        dp[i][j] = nums2[i] * nums1[j]
                 
+                
+                print(dp)
+                print("\n")
+                self.ComMax(dp,dp2)
         
-        print(inputarray)
+                
+                # 根據題目要求，最後需要回傳一個整數結果（此處示範回傳矩陣最大值）
+                return int(np.max(dp))
+        
+            def ComMax(self, inputarray, ansarray):
+                # i 遍歷「列」(rows)
+                for i in range(len(inputarray)):
+                    # j 應該遍歷「欄」(columns)，所以要用 len(inputarray[0])
+                    for j in range(len(inputarray[0])):
+                        # np.max 必須傳入一個 list []
+                        # 取得前一個狀態，如果是第一列或第一欄就當作 0 或負無限大
+                        prev_val = inputarray[i-1][j-1] if (i > 0 and j > 0) else -10**9
+                        up_val = inputarray[i-1][j] if i > 0 else -10**9
+                        left_val = inputarray[i][j-1] if j > 0 else -10**9
+        
+                        inputarray[i][j] = max(inputarray[i][j], inputarray[i][j] + prev_val, up_val, left_val)
+                        
+                
+                print(inputarray)
 
 
         
