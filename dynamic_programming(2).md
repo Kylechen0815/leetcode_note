@@ -20,3 +20,55 @@ At the end, both strings are equal, and 115 + 116 = 231 is the minimum sum possi
 最後，兩個字串相等，115 + 116 = 231 是實現此目的的最小和。
 
 
+
+```python
+import numpy as np
+class Solution(object):
+
+    def minimumDeleteSum(self, s1, s2):
+        """
+        :type s1: str
+        :type s2: str
+        :rtype: int
+        """
+        dp =  np.zeros((len(s2),len(s1)),dtype = int)
+        self.ansmatrix(dp,s1,s2)
+        longeststr = self.dflongsetstr(dp,s1)
+        print "\n"
+        return self.strminus(s1,s2,longeststr)
+
+
+
+    #參數矩陣（同個字母為1，否則0）    
+    def ansmatrix(self, dp,s1,s2):
+        for i in range(len(s2)):
+            for j in range(len(s1)):
+                if s2[i] == s1[j]:
+                    dp[i][j] = ord(s1[j])
+                else :
+                    dp[i][j] = 0
+        print dp            
+
+
+    def dflongsetstr(self, dp, s1):   
+        longeststr = ""
+        for i in range(len(dp)):
+            # j 應該遍歷「欄」(columns)，所以要用 len(inputarray[0])
+            for j in range(len(dp[0])):
+                # np.max 必須傳入一個 list []
+                # 取得前一個狀態，如果是第一列或第一欄就當作 0 或負無限大
+                prev_val = dp[i-1][j-1] if (i > 0 and j > 0) else -10**9
+                up_val = dp[i-1][j] if i > 0 else -10**9
+                left_val = dp[i][j-1] if j > 0 else -10**9
+
+                dp[i][j] = max(dp[i][j], dp[i][j] + prev_val, up_val, left_val)       
+                      
+        print dp   
+        return dp[i][j]    
+
+    #計算相減的值
+    def strminus(self, s1, s2, lstr):
+
+        total_delete_sum = sum(ord(c) for c in s1) + sum(ord(c) for c in s2) - 2 * lstr
+        return total_delete_sum
+```
