@@ -1,5 +1,5 @@
 # 26/1/10
-Given two strings s1 and s2, return the lowest ASCII sum of deleted characters to make two strings equal.
+## Given two strings s1 and s2, return the lowest ASCII sum of deleted characters to make two strings equal.
 
 Example 1:
 
