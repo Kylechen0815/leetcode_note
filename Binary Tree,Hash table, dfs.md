@@ -6,16 +6,15 @@ A node is called the deepest if it has the largest depth possible among any node
 
 The subtree of a node is a tree consisting of that node, plus the set of all descendants of that node.
 
- 
-<img width="722" height="614" alt="sketch1" src="https://github.com/user-attachments/assets/b52b3f86-ecb5-42bd-aed8-ab88ca25b942" />
-
-Example 1:
-
 Input: root = [3,5,1,6,2,0,8,null,null,7,4]
 Output: [2,7,4]
 Explanation: We return the node with value 2, colored in yellow in the diagram.
 The nodes coloured in blue are the deepest nodes of the tree.
 Notice that nodes 5, 3 and 2 contain the deepest nodes in the tree but node 2 is the smallest subtree among them, so we return it.
+
+ 
+<img width="722" height="614" alt="sketch1" src="https://github.com/user-attachments/assets/b52b3f86-ecb5-42bd-aed8-ab88ca25b942" />
+
 
 給定root一棵二元樹，每個節點的深度是到根節點的最短距離。
 
@@ -32,7 +31,7 @@ Notice that nodes 5, 3 and 2 contain the deepest nodes in the tree but node 2 is
 說明：我們傳回值為 2 的節點，圖中黃色標記的節點。
 藍色標記的節點是樹中最深的節點。
 請注意，節點 5、3 和 2 包含樹中最深的節點，但節點 2 是其中最小的子樹，因此我們返回它。
-例2：
+
 
 
 ```python
