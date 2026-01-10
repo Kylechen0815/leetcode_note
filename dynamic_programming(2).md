@@ -41,7 +41,7 @@ class Solution(object):
 
 
 
-    #參數矩陣（同個字母為1，否則0）    
+    #參數矩陣（同個字母為當前ascii，否則0）    
     def ansmatrix(self, dp,s1,s2):
         for i in range(len(s2)):
             for j in range(len(s1)):
