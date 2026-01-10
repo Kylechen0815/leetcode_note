@@ -1,5 +1,6 @@
-# 26/1/10
+# 26/1/10 (solution needed improved)
 ## Smallest Subtree with all the Deepest Nodes
+
 Given the root of a binary tree, the depth of each node is the shortest distance to the root.
 
 Return the smallest subtree such that it contains all the deepest nodes in the original tree.
@@ -34,7 +35,7 @@ Notice that nodes 5, 3 and 2 contain the deepest nodes in the tree but node 2 is
 藍色標記的節點是樹中最深的節點。
 請注意，節點 5、3 和 2 包含樹中最深的節點，但節點 2 是其中最小的子樹，因此我們返回它。
 
-
+### 
 
 ```python
 class Solution(object):
