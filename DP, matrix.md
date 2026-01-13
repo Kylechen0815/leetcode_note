@@ -22,7 +22,8 @@ Output: 6
 
 ![66a6288f-494d-4e10-ba74-9f702b699eb2](https://github.com/user-attachments/assets/c8542869-40c1-4d79-86f4-44de4bdfe621)
 
-### 碰到一個問題就是中間可能會出現類似工字形 因爲只有計算頭尾的長寬 解法就是往上遍歷時都往左邊去檢查是否有0 動態修改minimal_wide
+### 碰到一個問題就是中間可能會出現類似工字形 因爲只有計算頭尾的長寬 解法就是往上遍歷時都往左邊去檢查是否有0
+### 動態修改minimal_wide
 ```python
 import numpy as np
 
