@@ -16,7 +16,7 @@ Explanation: The maximal rectangle is shown in the above picture.
 
 輸入：matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
 Output: 6
-### solution：
+## solution：
 ### 這題的解法是先將橫竪的連續數量加起來 遇到0則重新計算 然後會得到一個橫著看和竪著看的最大1*n 或者 n*1的長方形 但是還是會出現2*2 以上的長方形及正方形 這時候就是去每一個格子做修正 具體判斷邏輯是找出這點往左及往上的最大來連續矩形 
 
 ![66a6288f-494d-4e10-ba74-9f702b699eb2](https://github.com/user-attachments/assets/c8542869-40c1-4d79-86f4-44de4bdfe621)
