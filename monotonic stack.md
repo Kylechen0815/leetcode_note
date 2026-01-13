@@ -27,9 +27,11 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
 ### monotonic stack的用處是可以很快速的找到最相鄰的較大值或較小值
 ### 這題有使用到這個技巧 方法是先利用list的第0項往右看作ms（若右邊沒有比當前值小的就回傳-1）
 <img width="680" height="693" alt="image" src="https://github.com/user-attachments/assets/1ed71b02-2aaa-42e5-b6cc-c09df7f605a3" />
+
 ### 接下來就是算面積，算法是max(自己，區間内的最小值 * 目前已經數的條數， 自己 * 到上一個有index值的距離）
 ### 但是會出現一個問題就是它只能處理右圖左邊的部分， 右邊的部分會有多算的情況（後來改成少算，因爲參照標準只剩他一格，右邊那個比他小會有新的index)
 ### 後來采取左右都看得方式 就是從左至右和從右至左都做一個 上述圖表，算兩次的最大面積 如果左右看時，剛好高都是一樣 則合并面積
+
 <img width="1182" height="642" alt="image" src="https://github.com/user-attachments/assets/f2aa94f1-e603-4d88-9798-3a0a0a0bfbf9" />
 
 ```python
