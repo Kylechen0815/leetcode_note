@@ -18,7 +18,7 @@ At the end, both strings are equal, and 115 + 116 = 231 is the minimum sum possi
 說明：從 "sea" 中刪除 "s" 會將 "s" 的 ASCII 值 (115) 加到總和中。
 從“eat”中刪除“t”會使總和增加116。
 最後，兩個字串相等，115 + 116 = 231 是實現此目的的最小和。
-
+## solution：
 ### 這題跟1/9一樣 重點在於如何繪製表格 一開始想到要把兩個字串做對比 一樣的就填入1，否則填入0 但是發現無法處理下一列時在 j<current_j 遇到1時該如何處理 後來的解決方法為把一樣的char換成ascii填入表格
 
 ![da139b79-b664-4415-b39b-22e71f78d813](https://github.com/user-attachments/assets/fd0920ad-ea50-4357-a331-d60513fb6c08)
