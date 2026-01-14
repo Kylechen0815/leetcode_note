@@ -2,6 +2,7 @@
 # 84. Largest Rectangle in Histogram
 
 Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+
 <img width="522" height="242" alt="image" src="https://github.com/user-attachments/assets/46d4b20a-db44-47a1-89d6-a8f3941a69fb" />
 
 Example 1:
