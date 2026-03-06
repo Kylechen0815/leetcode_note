@@ -77,6 +77,8 @@ Connect to device>  enter the device
   adb  device  
 
   adb  shell 
+  
+  exit
 
  
 
