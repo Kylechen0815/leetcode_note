@@ -1,5 +1,4 @@
-3/5
-1. 
+# 3/1. 
 
 MTK Flash tool 
 
@@ -80,6 +79,10 @@ Connect to device>  enter the device
   adb  shell 
 
  
+
+ 
+
+
 
  
 
