@@ -42,6 +42,7 @@ sudo chmod +x * -R
 
   3.   Test case unzip 
 
+       Run /media/yj-jing/Kyle/Project/tools/SP_Flash_Tool_Selector_exe_Linux_v1.2548.00.100/SP_Flash_Tool_V6 
   4.   Download and restart: 
 
          Click auto reboot and format all + download 
@@ -79,7 +80,10 @@ Connect to device>  enter the device
   adb  shell 
   
   exit
+----------------------------------------------------------------
 
+
+ctrl + alt + t : 新的terminal視窗
  
 
  
