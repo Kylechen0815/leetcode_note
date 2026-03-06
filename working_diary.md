@@ -1,3 +1,6 @@
+3/5
+1. 
+
 MTK Flash tool 
 
 NAS路徑: smb://amt-nas.local/file/MTK/tools 
@@ -14,14 +17,70 @@ Linux版,需要調整執行權限chmod +x
 
 windows版 
 
-    SP_Flash_Tool_Selector_v1.2433.04.000 
+    SP_Flash_Tool_Selector_v1.2433.04.00 
 
  
 
  
 
-圖片路徑：amt-nas.local/image/advantech_image/ 
+Image paths：amt-nas.local/image/advantech_image/ 
 
-advantech-mt8391-aim-79h-userdebug-2026-0225-1549 
+Test case: advantech-mt8391-aim-79h-userdebug-2026-0225-1549 
+
+  
+
+Flash_tool execution: 
+
+Stay in file :SP_Flash_Tool_Selector_exe_Linux_v1.2548.00.100 
+
+Terminal command:   (will be rejected if typing   chmod +x *  due to no permission) 
+
+sudo chmod +x * -R                            
+
+          sudo ./FlashToolSelector 
+
+    
+
+  3.   Test case unzip 
+
+  4.   Download and restart: 
+
+         Click auto reboot and format all + download 
+
+-------------------------------------------------------------------------------- 
+
+  
+
+  How to enable adb in android user build 
+
+ 
+
+Enable Developer options: 
+
+Open the Settings app. 
+
+Scroll down and tap About phone (or About device) 
+
+Find the Build number entry and tap it rapidly seven times until a message appears saying, "You are now a developer!". 
+
+ 
+
+Enable USB debugging (or Wireless debugging): 
+
+ System > Advanced >Developer options. 
+
+ 
+
+Terminal command:   
+
+Connect to device>  enter the device  
+
+  adb  device  
+
+  adb  shell 
+
+ 
+
+ 
 
  
